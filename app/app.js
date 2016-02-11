@@ -24,6 +24,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'account' }
+            })
+            .state('arcade', {
+                url: '/arcade',
+                templateUrl: 'arcade/index.html',
+                controller: 'Arcade.IndexController',
+                controllerAs: 'vm',
+                data: {activeTab: 'arcade'}
             });
     }
 
