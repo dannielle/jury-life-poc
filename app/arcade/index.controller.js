@@ -5,7 +5,7 @@
         .module('app')
         .controller('Arcade.IndexController', ArcadeController);
 
-    function ArcadeController(ArcadeService) {
+    function ArcadeController(ArcadeService, FlashService) {
         var vm = this;
 
         vm.arcade = {};
@@ -19,6 +19,9 @@
         function initController() {
             ArcadeService.GetAllGames().then(function (games) {
                 vm.arcade.games.title = games;
+            })
+            .catch(function (error) {
+                FlashService.Error(error);
             });
         }
     }
