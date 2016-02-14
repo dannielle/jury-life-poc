@@ -31,6 +31,13 @@
                 controller: 'Arcade.IndexController',
                 controllerAs: 'vm',
                 data: {activeTab: 'arcade'}
+            })
+            .state('arcade/games/add', {
+                url: '/arcade/games/add',
+                templateUrl: 'arcade/games/add/index.html',
+                controller: 'Arcade.IndexController',
+                controllerAs: 'vm',
+                data: {activeTab: 'arcade'}
             });
     }
 

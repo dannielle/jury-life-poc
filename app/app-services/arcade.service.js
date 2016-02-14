@@ -9,11 +9,17 @@
         var service = {};
 
         service.GetAllGames = GetAllGames;
+        service.CreateGame = CreateGame;
 
         return service;
 
         function GetAllGames() {
-            return $http.get('/api/arcade/games').then(handleSuccess, handleError);
+            return $http.get('/arcade/games').then(handleSuccess, handleError);
+        }
+
+
+        function CreateGame(game) {
+            return $http.post('/arcade/games', game).then(handleSuccess, handleError);
         }
 
         // private functions

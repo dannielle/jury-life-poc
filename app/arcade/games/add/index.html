@@ -1,0 +1,13 @@
+<h1>Arcade Games</h1>
+<h2>Add Game</h2>
+<div class="form-container">
+    <form method="post">
+        <div class="form-group">
+            <label for="gameTitle">Game Title</label>
+            <input type="text" id="gameTitle" class="form-control" ng-model="vm.arcade.game.title" required />
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" ng-click="vm.createGame()">Add Game</button>
+        </div>
+    </form>
+</div>
