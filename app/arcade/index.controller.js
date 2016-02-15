@@ -32,7 +32,7 @@
         }
 
         function createGame() {
-            ArcadeService.CreateGame(vm.game)
+            ArcadeService.CreateGame(vm.arcade.game)
                 .then(function () {
                     FlashService.Success('New Game Added');
                 })
